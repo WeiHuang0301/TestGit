@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .systemBrown
     }
 
 
@@ -21,12 +21,10 @@ class splitViewController: UISplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let containVC = UIViewController()
-        containVC.view.backgroundColor = .systemBlue
         
         self.viewControllers = [
             UINavigationController(rootViewController: MenuController(style: .plain)),
-            UINavigationController(rootViewController: containVC)
+            UINavigationController(rootViewController: ViewController())
         ]
     }
 
